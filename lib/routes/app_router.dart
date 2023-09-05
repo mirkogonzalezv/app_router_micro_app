@@ -19,20 +19,23 @@ final router = GoRouter(
       builder: (context, state) => CartPage(),
     ),
     GoRoute(
-        path: '/products-list',
-        name: 'products-list',
-        builder: (context, state) => ProductListPage(),
-        routes: [
-          GoRoute(
-            path: 'detail/:id',
-            builder: (context, GoRouterState state) {
-              final idProduct = state.pathParameters['id'];
-              return ProductDetailPage(
-                idProduct: idProduct!,
-              );
-            },
-          )
-        ]),
+      path: '/products-list',
+      name: 'products-list',
+      builder: (context, state) => ProductListPage(),
+      routes: [
+        GoRoute(
+          path: 'detail/:id/:first_category',
+          builder: (context, GoRouterState state) {
+            final idProduct = state.pathParameters['id'];
+            final firstCategory = state.pathParameters['first_category'];
+            return ProductDetailPage(
+              idProduct: idProduct!,
+              firstCategory: firstCategory!,
+            );
+          },
+        )
+      ],
+    ),
   ],
   errorPageBuilder: (context, state) {
     return MaterialPage(

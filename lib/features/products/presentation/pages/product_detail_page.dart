@@ -1,8 +1,14 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 
 class ProductDetailPage extends StatelessWidget {
   final String idProduct;
-  const ProductDetailPage({super.key, required this.idProduct});
+  final String firstCategory;
+  const ProductDetailPage({
+    Key? key,
+    required this.idProduct,
+    required this.firstCategory,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +18,12 @@ class ProductDetailPage extends StatelessWidget {
       ),
       body: Container(
         child: Center(
-          child: Text('Vista Producto Detalle: $idProduct'),
+          child: Column(
+            children: [
+              Text('Vista Producto Detalle: $idProduct'),
+              Text('Primera categoria: $firstCategory')
+            ],
+          ),
         ),
       ),
     );

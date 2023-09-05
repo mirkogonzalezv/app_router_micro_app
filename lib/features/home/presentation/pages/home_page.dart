@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -11,7 +12,18 @@ class HomePage extends StatelessWidget {
       ),
       body: Container(
         child: Center(
-          child: Text('Vista HOME'),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text('Vista HOME'),
+              ElevatedButton(
+                onPressed: () {
+                  context.push('/products-list');
+                },
+                child: Text('Ir a lista de productos'),
+              ),
+            ],
+          ),
         ),
       ),
     );
