@@ -1,9 +1,9 @@
 import 'package:app_router_flutter/features/cart/presentation/pages/cart_page.dart';
 import 'package:app_router_flutter/features/home/presentation/pages/home_page.dart';
-import 'package:app_router_flutter/features/products/presentation/pages/product_detail_page.dart';
-import 'package:app_router_flutter/features/products/presentation/pages/product_list.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:products_detail_microapp/products_detail_microapp.dart';
+import 'package:products_list_microapp/products_list_microapp.dart';
 
 final router = GoRouter(
   initialLocation: '/',
@@ -21,14 +21,14 @@ final router = GoRouter(
     GoRoute(
       path: '/products-list',
       name: 'products-list',
-      builder: (context, state) => ProductListPage(),
+      builder: (context, state) => ProductsListMicroapp(),
       routes: [
         GoRoute(
           path: 'detail/:id/:first_category',
           builder: (context, GoRouterState state) {
             final idProduct = state.pathParameters['id'];
             final firstCategory = state.pathParameters['first_category'];
-            return ProductDetailPage(
+            return ProductDetailMicroapp(
               idProduct: idProduct!,
               firstCategory: firstCategory!,
             );

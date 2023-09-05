@@ -45,13 +45,13 @@ class ProductListPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Vista Lista Productos'),
+        title: const Text('Vista Lista Productos'),
       ),
       body: Container(
-        margin: EdgeInsets.only(top: 40),
+        margin: const EdgeInsets.only(top: 40),
         child: Column(
           children: [
-            Column(
+            const Column(
               children: [
                 Text('Primera categoria: 1'),
                 Text('Primera categoria: 2'),
@@ -60,12 +60,12 @@ class ProductListPage extends StatelessWidget {
             ),
             Expanded(
               child: GridView.builder(
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2,
                     childAspectRatio: 1.15,
                     crossAxisSpacing: 10,
                     mainAxisSpacing: 10),
-                padding: EdgeInsets.all(20),
+                padding: const EdgeInsets.all(20),
                 itemCount: listaProductos.length,
                 itemBuilder: (context, index) {
                   return Container(
@@ -83,7 +83,7 @@ class ProductListPage extends StatelessWidget {
                             context.go(
                                 '/products-list/detail/${listaProductos[index]['sku']}/${listaProductos[index]['main_category']}');
                           },
-                          child: Text('Agregar producto'),
+                          child: const Text('Agregar producto'),
                         ),
                       ],
                     ),

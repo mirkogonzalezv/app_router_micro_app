@@ -280,6 +280,20 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.8.3"
+  products_detail_microapp:
+    dependency: "direct main"
+    description:
+      path: products_detail_microapp
+      relative: true
+    source: path
+    version: "0.0.1"
+  products_list_microapp:
+    dependency: "direct main"
+    description:
+      path: products_list_microapp
+      relative: true
+    source: path
+    version: "0.0.1"
   provider:
     dependency: transitive
     description:

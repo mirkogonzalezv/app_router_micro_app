@@ -1,4 +1,3 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 
 class ProductDetailPage extends StatelessWidget {
@@ -9,6 +8,7 @@ class ProductDetailPage extends StatelessWidget {
     required this.idProduct,
     required this.firstCategory,
   }) : super(key: key);
+
 
   @override
   Widget build(BuildContext context) {

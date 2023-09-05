@@ -16,6 +16,10 @@ dependencies:
   cupertino_icons: ^1.0.2
   bloc: ^8.1.2
   flutter_bloc: ^8.1.3
+  products_list_microapp:
+    path: 'products_list_microapp'
+  products_detail_microapp:
+    path: 'products_detail_microapp'
 
 dev_dependencies:
   flutter_test:
